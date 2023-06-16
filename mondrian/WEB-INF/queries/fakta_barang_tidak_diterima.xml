@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Schema name="dw_purchasing">
+<!--
+  == This software is subject to the terms of the Eclipse Public License v1.0
+  == Agreement, available at the following URL:
+  == http://www.eclipse.org/legal/epl-v10.html.
+  == You must accept the terms of that agreement to use this software.
+  ==
+  == Copyright (C) 2000-2005 Julian Hyde
+  == Copyright (C) 2005-2011 Pentaho and others
+  == All Rights Reserved.
+  -->
+
+<!-- Shared dimensions -->
+
+<!-- Purcashing -->
+<Cube name="Purcashing" defaultMeasure="Order Qty">
+  <!-- Use annotations to provide translations of this cube's caption and
+       description into German and French. Use of annotations in this manner is
+       experimental and unsupported; just for testing right now. -->
+   
+  <Table name="fakta_barang_tidak_diterima2"/>
+
+    
+  <!-- <Dimension name="Product" foreignKey ="ProductID">
+      <Hierarchy hasAll="true" allMemberName="All Product" primaryKey ="ProductID">
+        <Table name="product"/>
+        <Level name="ProductID" column="ProductID" uniqueMembers="true"/>
+        <Level name="Name" column="Name"/>
+      </Hierarchy>
+  </Dimension> -->
+  <Dimension name="Vendor" foreignKey ="VendorID">
+      <Hierarchy hasAll="true" allMemberName="All vendor" primaryKey ="VendorID">
+        <Table name="vendor"/>
+        <Level name="VendorID" column="VendorID" uniqueMembers="true"/>
+        <Level name="Name" column="Name"/>
+      </Hierarchy>
+  </Dimension>
+
+  <Dimension name="Time" foreignKey="TimeID">
+    <Hierarchy hasAll="true" allMemberName="All Times" primaryKey="TimeID">
+      <Table name="time" />
+      <Level name="Year" column="tahun" type="Numeric" uniqueMembers="true"
+          levelType="TimeYears"/>
+      <Level name="Month" column="bulan" uniqueMembers="false" type="Numeric"
+          levelType="TimeMonths"/>
+      <Level name="Date" column="tanggal" uniqueMembers="false" type="Numeric"
+          levelType="TimeDays"/>
+    </Hierarchy>
+   
+  </Dimension>
+
+  <Dimension name="Employee" foreignKey = "EmployeeID">
+    <Hierarchy hasAll="true" allMemberName="All employees" primaryKey ="EmployeeID">
+      <Table name="employee" />
+      <Level name="EmployeeID" column="EmployeeID" uniqueMembers="true"/>
+      <Level name="Name" column="Name"/>
+    </Hierarchy>
+  </Dimension>
+
+  <Measure name="Order Qty" column="OrderQty" aggregator="sum"
+      formatString="Standard"/>
+  <!-- <Measure name="Rejected Qty" column="RejectedQty" aggregator="sum"
+      formatString="Standard"/>
+  <Measure name="Stocked Qty" column="StockedQty" aggregator="sum"
+      formatString="Standard"/> -->
+
+  
+</Cube>
+
+</Schema>
