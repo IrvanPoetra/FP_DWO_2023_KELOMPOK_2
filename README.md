@@ -1,10 +1,13 @@
 # FP_DWO_2023_KELOMPOK_2
 #Final Project Pengembangan Data Warehouse dan Dashboard
-#Dibuat oleh Kelompok 2
-#Program Studi Sistem Informasi
-#Fakultas Ilmu Komputer
-#UPN "Veteran" Jawa Timur
-#Nama Anggota :
+  Dibuat oleh Kelompok 2
+  Program Studi Sistem Informasi
+
+Fakultas Ilmu Komputer
+
+UPN "Veteran" Jawa Timur
+
+Nama Anggota :
 - Irvan Pratama Putra (20082010091)
 - Belva Aprilliano Annyndra (20082010101)
 - Haidar Triari Respati (21082010086)
