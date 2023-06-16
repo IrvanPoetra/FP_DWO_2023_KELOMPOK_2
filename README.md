@@ -1,11 +1,9 @@
 # FP_DWO_2023_KELOMPOK_2
-#Final Project Pengembangan Data Warehouse dan Dashboard
-  Dibuat oleh Kelompok 2
-  Program Studi Sistem Informasi
-
-Fakultas Ilmu Komputer
-
-UPN "Veteran" Jawa Timur
+Final Project Pengembangan Data Warehouse dan Dashboard OLAP  
+Dibuat oleh Kelompok 2  
+Program Studi Sistem Informasi  
+Fakultas Ilmu Komputer  
+UPN "Veteran" Jawa Timur  
 
 Nama Anggota :
 - Irvan Pratama Putra (20082010091)
@@ -14,7 +12,6 @@ Nama Anggota :
 - Sulthan Atha Muhammad (21082010126)
 
 Langkah-langkah yang dibutuhkan untuk menjalankan app dengan baik :
-
 1. Install database server: MySql (disini kami menggunakan Xampp versi terbaru).
 2. Install software mysql management: phpMyAdmin dari Xampp (ATAU YG LAIN).
 3. Extract FP_DWO_2023_KELOMPOK_2.zip pada folder htdocs XAMPP (xampp/htdocs).
