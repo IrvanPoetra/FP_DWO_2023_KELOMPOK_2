@@ -15,7 +15,7 @@ Langkah-langkah yang dibutuhkan untuk menjalankan app dengan baik :
 1. Install database server: MySql (disini kami menggunakan Xampp versi terbaru).
 2. Install software mysql management: phpMyAdmin dari Xampp (ATAU YG LAIN).
 3. Extract FP_DWO_2023_KELOMPOK_2.zip pada folder htdocs XAMPP (xampp/htdocs).
-4. Extract FP_DWO_2023_KELOMPOK_2.zip ke dalam server Tomcat bawaan dari XAMPP (xampp/tomcat/webapps).
+4. Extract mondrian.rar ke dalam server Tomcat bawaan dari XAMPP (xampp/tomcat/webapps).
 5. Jalankan Xampp control panel.
 6. Start apache dan mysql server.
 7. Buka phpMyAdmin (localhost/phpmyadmin).
