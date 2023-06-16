@@ -12,13 +12,13 @@ Nama Anggota :
 
 Langkah-langkah yang dibutuhkan untuk menjalankan app dengan baik :
 
-Install database server: MySql (disini kami menggunakan Xampp versi terbaru).
-Install software mysql management: phpMyAdmin dari Xampp (ATAU YG LAIN).
-Extract FP_DWO_2023_KELOMPOK_2.zip pada folder htdocs XAMPP (xampp/htdocs).
-Extract FP_DWO_2023_KELOMPOK_2.zip ke dalam server Tomcat bawaan dari XAMPP (xampp/tomcat/webapps).
-Jalankan Xampp control panel.
-Start apache dan mysql server.
-Buka phpMyAdmin (localhost/phpmyadmin).
-Buat database dengan nama dwo_lagi.
-Import file dwo_lagi.sql ke dalam database dwo_lagi.
-Jalankan aplikasi dengan mengakses http://localhost/FP_DataWarehouseSakila2021_18082010028
+1. Install database server: MySql (disini kami menggunakan Xampp versi terbaru).
+2. Install software mysql management: phpMyAdmin dari Xampp (ATAU YG LAIN).
+3. Extract FP_DWO_2023_KELOMPOK_2.zip pada folder htdocs XAMPP (xampp/htdocs).
+4. Extract FP_DWO_2023_KELOMPOK_2.zip ke dalam server Tomcat bawaan dari XAMPP (xampp/tomcat/webapps).
+5. Jalankan Xampp control panel.
+6. Start apache dan mysql server.
+7. Buka phpMyAdmin (localhost/phpmyadmin).
+8. Buat database dengan nama dwo_lagi.
+9. Import file dwo_lagi.sql ke dalam database dwo_lagi.
+10. Jalankan aplikasi dengan mengakses http://localhost/FP_DataWarehouseSakila2021_18082010028
