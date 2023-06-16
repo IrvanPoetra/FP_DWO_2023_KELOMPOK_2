@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Schema name="dwsakila">  
+
+<!-- Sales -->
+<Cube name="Beli" defaultMeasure="Amount">
+  
+  <Table name="fakta_pembelian"/>
+
+  <Dimension name="Vendor" foreignKey ="vendor_id">
+      <Hierarchy hasAll="true" allMemberName="All Vendor" primaryKey ="vendor_id">
+      <Table name="vendor"/>
+      <Level name="vendor" column="vendor_name"/>
+      </Hierarchy>
+  </Dimension>
+
+  <Dimension name="Time" foreignKey="time_id">
+    <Hierarchy hasAll="true" allMemberName="All Times" primaryKey="time_id">
+      <Table name="time" />
+      <Level name="Year" column="tahun" type="Numeric" uniqueMembers="true"
+          levelType="TimeYears"/>
+      <Level name="Month" column="bulan" uniqueMembers="false" type="Numeric"
+          levelType="TimeMonths"/>
+      <Level name="Date" column="tanggal" uniqueMembers="false" type="Numeric"
+          levelType="TimeDays"/>
+    </Hierarchy>
+   
+  </Dimension>
+
+  <Dimension name="Vendor Address" foreignKey = "vendoraddress_id">
+    <Hierarchy hasAll="true" allMemberName="All Vendor Address" primaryKey ="vendoraddress_id">
+      <Table name="vendor_address" />
+      <Level name="Country" column="country"/>
+      <Level name="Province" column="province_name" />
+      <Level name="City" column="city" />
+      <Level name="Address Type" column="address_type" />
+    </Hierarchy>
+  </Dimension>
+
+  <Dimension name="Shipping Method" foreignKey="shipmethod_id">
+    <Hierarchy  hasAll  ="true" allMemberName="All Shipping Method" primaryKey  = "shipmethod_id">
+        <Table name="shipping_method"/>
+        <Level name="shipping_method" column="shipMethod_name"/>
+    </Hierarchy>
+  </Dimension>
+  
+    <Dimension name="Product" foreignKey="product_id">
+    <Hierarchy  hasAll  ="true" allMemberName="All Product" primaryKey  = "product_id">
+        <Table name="Product"/>
+        <Level name="Name" column="product_name"/>
+        <Level name="Category" column="product_category"/>
+    </Hierarchy>
+  </Dimension>
+
+    <Measure name="Unit Price" column="unit_price" aggregator="sum"
+      formatString="Standard"/>
+    <Measure name="Order Quantity" column="order_qty" aggregator="sum"
+      formatString="Standard"/>
+    <Measure name="Sub Total" column="subtotal" aggregator="sum"
+      formatString="Standard"/>
+  
+</Cube>
+
+</Schema>
